@@ -1,0 +1,27 @@
+/* Span Styling */
+
+.tag-container {
+    margin: 70px 0; /* Adjust margin for spacing */
+}
+
+.same-style {
+    display: flex; /* Makes each span align horizontally */
+    /* justify-content: space-between; Adds space between text and icon */
+    align-items: center; /* Center the icon vertically with text */
+    padding: 10px 0; /* Adds vertical padding */
+    font-size: 16px; /* Optional: Set font size */
+    color: #333; /* Optional: Set text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.same-style a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.same-style a:hover{
+    color: #10A869;
+}
+.same-style i {
+    margin-left: 5px; /* Adds space between the text and the icon */
+}

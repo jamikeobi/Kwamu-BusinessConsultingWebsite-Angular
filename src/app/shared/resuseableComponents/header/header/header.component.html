@@ -1,0 +1,88 @@
+<!--/Header-->
+<header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+            <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="/home">
+                    <span class="w3yellow">BDO</span> Nigeria
+                </a></h1>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="/services/consulting">Consulting</a></li>
+                            <li><a class="dropdown-item" href="/services/audit">Audit</a></li>
+                            <li><a class="dropdown-item" href="/services/tax">Tax</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Industries Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Industries
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
+                            <li><a class="dropdown-item" href="/industries/finance">Finance</a></li>
+                            <li><a class="dropdown-item" href="/industries/healthcare">Healthcare</a></li>
+                            <li><a class="dropdown-item" href="/industries/technology">Technology</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/insights">Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item search-right">
+                        <a href="#search" class="btn search-btn" title="search"><span class="fas fa-search me-2" aria-hidden="true"></span></a>
+                        <!-- search popup -->
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <h3 class="title-w3l two mb-4 text-left">Search Here</h3>
+                                <form action="#" method="GET" class="search-box d-flex position-relative">
+                                    <input type="search" placeholder="Enter Keyword here" name="search" required="required" autofocus="">
+                                    <button type="submit" class="btn"><span class="fas fa-search" aria-hidden="true"></span></button>
+                                </form>
+                            </div>
+                            <a class="close" href="#close">×</a>
+                        </div>
+                        <!-- /search popup -->
+                    </li>
+                </ul>
+
+                <!-- Get Started Button -->
+                <ul class="header-search me-lg-4">
+                    <li class="get-btn">
+                        <a href="/contact" class="btn btn-style btn-primary" title="search">Get Started <i class="fas fa-arrow-right ms-lg-4 ms-2"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- toggle switch for light and dark theme -->
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+            <!-- //toggle switch for light and dark theme -->
+        </nav>
+    </div>
+</header>
+<!--//Header-->
