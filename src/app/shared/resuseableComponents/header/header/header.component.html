@@ -1,88 +1,567 @@
-<!--/Header-->
 <header id="site-header" class="fixed-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
-            <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="/home">
-                    <span class="w3yellow">BDO</span> Nigeria
-                </a></h1>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+      <h1>
+        <a class="navbar-brand pe-xl-5 pe-lg-4" href="/home">
+          <img src="../../../../../assets/images/KWAMU Logo.png" alt="" />
+        </a>
+      </h1>
+      <button
+        class="navbar-toggler collapsed"
+        (click)="toggleNavbar()"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
 
-                    <!-- Services Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="/services/consulting">Consulting</a></li>
-                            <li><a class="dropdown-item" href="/services/audit">Audit</a></li>
-                            <li><a class="dropdown-item" href="/services/tax">Tax</a></li>
-                        </ul>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <!-- Dropdown menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Added d-flex for flex layout -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/services"
+                      style="text-decoration: none; color: black"
+                      >Services</a
+                    >
+                  </h5>
+                  <ul class="list-unstyled">
+                    <li
+                      data-submenu="blog"
+                      (mouseover)="onSidebarHover('blog')"
+                      [class.active]="currentSubmenu === 'blog'"
+                    >
+                      <a class="nav-link" href="/services/advisory"
+                        ><i class="fas fa-arrow-right"></i> Advisory</a
+                      >
                     </li>
-
-                    <!-- Industries Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Industries
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
-                            <li><a class="dropdown-item" href="/industries/finance">Finance</a></li>
-                            <li><a class="dropdown-item" href="/industries/healthcare">Healthcare</a></li>
-                            <li><a class="dropdown-item" href="/industries/technology">Technology</a></li>
-                        </ul>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('blog-single')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="/services/audit-assurance"
+                        ><i class="fas fa-arrow-right"></i> Audit & Assurance</a
+                      >
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/insights">Insights</a>
+                    <li
+                      data-submenu="email"
+                      (mouseover)="onSidebarHover('email')"
+                      [class.active]="currentSubmenu === 'email'"
+                    >
+                      <a class="nav-link" href="/services/tax"
+                        ><i class="fas fa-arrow-right"></i> Tax</a
+                      >
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item search-right">
-                        <a href="#search" class="btn search-btn" title="search"><span class="fas fa-search me-2" aria-hidden="true"></span></a>
-                        <!-- search popup -->
-                        <div id="search" class="pop-overlay">
-                            <div class="popup">
-                                <h3 class="title-w3l two mb-4 text-left">Search Here</h3>
-                                <form action="#" method="GET" class="search-box d-flex position-relative">
-                                    <input type="search" placeholder="Enter Keyword here" name="search" required="required" autofocus="">
-                                    <button type="submit" class="btn"><span class="fas fa-search" aria-hidden="true"></span></button>
-                                </form>
-                            </div>
-                            <a class="close" href="#close">×</a>
-                        </div>
-                        <!-- /search popup -->
-                    </li>
-                </ul>
-
-                <!-- Get Started Button -->
-                <ul class="header-search me-lg-4">
-                    <li class="get-btn">
-                        <a href="/contact" class="btn btn-style btn-primary" title="search">Get Started <i class="fas fa-arrow-right ms-lg-4 ms-2"></i></a>
-                    </li>
-                </ul>
-
+                  </ul>
+                </div>
+                <div class="col-md-9 nested-content">
+                  <div
+                    *ngIf="currentSubmenu === 'blog'"
+                    class="submenu-content"
+                  >
+                    <h5>Advisory</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/corporate-finance"
+                        >Corporate Finance</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/corporate-secretarial"
+                        >Corporate Secretarial</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/corporate-strategy"
+                        >Corporate Strategy & Business Development</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/due-diligence-work"
+                        >Due Diligence Work</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/export-development"
+                        >Export Development</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/human-capital-management"
+                        >Human Capital Management</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/management-systems"
+                        >Management Systems & Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/performance-improvement"
+                        >Performance Improvement</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/planning-policy"
+                        >Planning & Policy Formulation</a
+                      >
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'blog-single'"
+                    class="submenu-content"
+                  >
+                    <h5>Audit & Assurance</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/accounting-advisory"
+                        >Accounting Advisory Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/agreed-upon"
+                        >Agreed Upon Procedures</a
+                      >
+                    </p>
+                    <!-- <p>
+                      <a class="nav-link" href="services/audit-assurance/featured-insights"
+                        >Features Insights</a
+                      >
+                    </p> -->
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/financial-statement"
+                        >Financial Statement Audits</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/international-financial"
+                        >International Financial Reporting Standards</a
+                      >
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'email'"
+                    class="submenu-content"
+                  >
+                    <h5>Tax</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2019"
+                        >BDO Nigeria - Tax Bulletin on Finance Act 2019</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2020"
+                        >BDO Nigeria - Tax Bulletin on Finance Act 2010</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/federal-tax-matters"
+                        >Federal Tax Matters</a
+                      >
+                    </p>
+                    <p>
+                      <a class="nav-link" href="services/tax/payroll-services"
+                        >Payroll Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/tax-advisory-services"
+                        >Tax Advisory Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/tax-compliance-services"
+                        >Tax Compliance Services</a
+                      >
+                    </p>
+                    <p>
+                      <a class="nav-link" href="services/tax/tax-due-diligence"
+                        >Tax Due Diligence</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- toggle switch for light and dark theme -->
-            <div class="mobile-position">
-                <nav class="navigation">
-                    <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox">
-                            <div class="mode-container">
-                                <i class="gg-sun"></i>
-                                <i class="gg-moon"></i>
-                            </div>
-                        </label>
-                    </div>
-                </nav>
+          </li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/industries"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Industries
+            </a>
+            <!-- Dropdown menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Added d-flex for flex layout -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/industries"
+                      style="text-decoration: none; color: black"
+                      >Industries</a
+                    >
+                  </h5>
+                  <ul class="list-unstyled">
+                    <li
+                      data-submenu="blog"
+                      (mouseover)="onSidebarHover('consumer-business')"
+                      [class.active]="currentSubmenu === 'consumer-business'"
+                    >
+                      <a class="nav-link" href="industries/consumer-business"
+                        ><i class="fas fa-arrow-right"></i> Consumer Business</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/financial-services"
+                        ><i class="fas fa-arrow-right"></i> Financial
+                        Services</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/healthcare">
+                        Healthcare</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/manufacturing">
+                        Manufacturing</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/natural-resources">
+                        Natural Resources</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/not-for-profit">
+                        Not for profit</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/public-sector"
+                        >Public Sector</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/public-sector"
+                        >Public Sector</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a
+                        class="nav-link"
+                        href="industries/real-estate-construction"
+                      >
+                        Real Estate & Construction</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a
+                        class="nav-link"
+                        href="industries/technology-telecommunications"
+                      >
+                        Technology & Telecommunications</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/transport">
+                        Transport</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-9 nested-content">
+                  <div
+                    *ngIf="currentSubmenu === 'consumer-business'"
+                    class="submenu-content"
+                  >
+                    <h5>Consumer Business</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/consumer-products"
+                        >Consumer Products</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/gaming-hospitality-leisure"
+                        >Gaming, Hospitality & Leisure</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/retail"
+                        >Retail</a
+                      >
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'financial-services'"
+                    class="submenu-content"
+                  >
+                    <h5>Financial Services</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/financial-services/asset-management"
+                        >Asset Management</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- //toggle switch for light and dark theme -->
-        </nav>
-    </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/insights" role="button"> Insights </a>
+          </li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <!-- Dropdown menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Added d-flex for flex layout -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/about"
+                      style="text-decoration: none; color: black"
+                      >About</a
+                    >
+                  </h5>
+                  <ul class="list-unstyled">
+                    <li
+                      data-submenu="blog"
+                      (mouseover)="onSidebarHover('blog')"
+                      [class.active]="currentSubmenu === 'blog'"
+                    >
+                      <a class="nav-link" href="/about/about-BDO-nigeria"
+                        ><i class="fas fa-arrow-right"></i> About BDO Nigeria</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('global')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="/about/global-network"
+                        ><i class="fas fa-arrow-right"></i> Global Network</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="email"
+                      (mouseover)="onSidebarHover('people')"
+                      [class.active]="currentSubmenu === 'email'"
+                    >
+                      <a class="nav-link" href="/about/poeple-value"
+                        ><i class="fas fa-arrow-right"></i> People & Value</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="email"
+                      (mouseover)="onSidebarHover('why')"
+                      [class.active]="currentSubmenu === 'email'"
+                    >
+                      <a class="nav-link" href="/about/why-bdo"
+                        ><i class="fas fa-arrow-right"></i> Why BDO</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-9 nested-content">
+                  <div
+                    *ngIf="currentSubmenu === 'blog'"
+                    class="submenu-content"
+                  >
+                    <h5>About BDO Nigeria</h5>
+                    <p style="font-size: 15px">
+                      The firm of Oyediran Faleye Oke Co was registered to
+                      <br />
+                      practise as a firm of Chartered Accountants in Nigeria in
+                      <br />
+                      1973.
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'global'"
+                    class="submenu-content"
+                  >
+                    <h5>Global Network</h5>
+                    <p style="font-size: 15px">
+                      BDO is an international network of public accounting, tax
+                      <br />
+                      and advisory firms which perform professional services
+                      <br />
+                      under the name of BDO.
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'people'"
+                    class="submenu-content"
+                  >
+                    <h5>People & Value</h5>
+                    <p style="font-size: 15px">
+                      We have 11 highly experienced partners and directors, over
+                      <br />
+                      80 Professional staff and well over 45 Trainee staff
+                      (all<br />
+                      university graduates).
+                    </p>
+                  </div>
+                  <div *ngIf="currentSubmenu === 'why'" class="submenu-content">
+                    <h5>Why BDO</h5>
+                    <p style="font-size: 15px">
+                      At BDO, we believe that our new ideas and innovative
+                      <br />
+                      thinking help clients achieve their objectives and <br />
+                      contribute to their commercial success – now and in the
+                      <br />
+                      future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- <ul class="header-search me-lg-4">
+          <li class="get-btn">
+            <a
+              href="contact.html"
+              class="btn btn-style btn-primary"
+              title="Get Started"
+            >
+              Get Started <i class="fas fa-arrow-right ms-lg-4 ms-2"></i>
+            </a>
+          </li>
+        </ul> -->
+      </div>
+    </nav>
+  </div>
 </header>
-<!--//Header-->

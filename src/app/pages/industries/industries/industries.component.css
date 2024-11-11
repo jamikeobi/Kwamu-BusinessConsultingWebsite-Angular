@@ -53,3 +53,9 @@ a{
     flex-grow: 1; /* Allow the body to expand and fill the card */
 }
 
+
+
+img{
+    width: 310px;
+    height: 250px;
+}

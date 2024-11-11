@@ -1,0 +1,9 @@
+a{
+    color: #254C7F;
+}
+.card{
+    transition: .5s ease-in-out;
+}
+.card:hover{
+    box-shadow: 4px 4px 10px #254C7F;
+}

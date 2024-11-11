@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.w3l-blog {
+    padding: 60px 0; /* Spacing around the blog section */
+}
+
+/* Blog Container */
+.blog {
+    background-color: white; /* White background for the blog section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.blog-content p{
+    color: black;
+}
+
+/* Blog Post Styles */
+.bloghnypage-left {
+    padding: 20px; /* Padding within the blog post */
+}
+
+/* Single Post Image */
+.single-post-image img {
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Post Title Styles */
+.post-content-title {
+    font-size: 30px; /* Large font for titles */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Bullet Points */
+.bullet-points {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 20px 0; /* Margin around the list */
+}
+
+.bullet-points li {
+    margin-bottom: 10px; /* Spacing between list items */
+    font-size: 16px; /* Font size for bullet points */
+}
+
+.bullet-points span {
+    padding: 10px;
+    color: #254C7F; /* Color for icons */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #f1f1f1; /* Light grey background for sidebar */
+    padding: 20px; /* Padding inside sidebar */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Sidebar Widget Titles */
+.sidebar-widget h4 {
+    font-size: 18px; /* Larger font for widget titles */
+    margin-bottom: 15px; /* Spacing below titles */
+}
+
+/* Sidebar Updates */
+.sidebar-updates {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar-updates li {
+    margin-bottom: 10px; /* Spacing between items */
+    font-size: 14px; /* Smaller font for links */
+}
+
+.sidebar-updates li span {
+    color: #254C7F; /* Color for update icons */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-lg-8, .col-lg-4 {
+        flex: 0 0 100%; /* Stack columns on small screens */
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .post-content-title {
+        font-size: 20px; /* Smaller title on very small screens */
+    }
+}
