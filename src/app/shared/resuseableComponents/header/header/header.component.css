@@ -1,5 +1,5 @@
 header{
-    background: black;
+    background: #011b3d;
     backdrop-filter: blur(10px);
     /* border: 1px solid white; */
     padding:0px;
@@ -9,7 +9,21 @@ header{
     padding: 5px !important;
 }
 
-
+.navbar-collapse {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-collapse.show {
+    display: block;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      display: flex !important;
+    }
+  }
+  
 /* Mega Dropdown Styles */
 .mega-dropdown .dropdown-menu {
     font-size: 13px;
@@ -125,7 +139,7 @@ header{
 
 .mega-dropdown .dropdown-menu .nested-content p {
     font-size: 1em; /* Maintain font size for paragraphs */
-    line-height: 1.6;
+    line-height: 1;
     color: #555;
 }
 
@@ -136,12 +150,13 @@ header{
 }
 
 .mega-dropdown .dropdown-menu .nested-content ul li {
-    padding: 8px 0; /* Maintain spacing for nested items */
+    padding: 5px 0; /* Maintain spacing for nested items */
+    font-size: 1px !important;
 }
 
 .mega-dropdown .dropdown-menu .nested-content ul li a {
     color: #333;
-    font-size: 1em;
+    font-size: 10px;
     text-decoration: none;
 }
 

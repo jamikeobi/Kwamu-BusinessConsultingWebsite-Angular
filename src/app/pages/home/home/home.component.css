@@ -31,6 +31,12 @@
 
 /* Custom card styling */
 
+#background{
+  background-color: #254C7F;
+}
+.card-title{
+  color: black !important;
+}
 .card-container {
     display: flex;
     gap: 20px; /* Spacing between cards */
@@ -58,7 +64,7 @@
   
   .custom-card .card-text {
     font-size: 1rem;
-    color: #666;
+    color: whitesmoke;
     transition: color 0.3s ease;
   }
   
@@ -89,7 +95,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #254C7F;
+    background-color: #3d85e2;
     z-index: 0;
     transition: transform 0.5s ease;
   }

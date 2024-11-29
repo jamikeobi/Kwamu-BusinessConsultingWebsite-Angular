@@ -7,13 +7,9 @@
         </a>
       </h1>
       <button
-        class="navbar-toggler collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+      class="navbar-toggler"
+      type="button"
+      aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon">
           <i class="fas fa-bars"></i>
@@ -123,6 +119,41 @@
                     <p>
                       <a
                         class="nav-link"
+                        href="services/advisory/business-finance"
+                        >Business Finance</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/transaction-advisory"
+                        >Transaction Advisory</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/risk-management"
+                        >Risk Management</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/wealth-management"
+                        >Wealth Management</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/advisory/retirement-pension"
+                        >Retirement & Pension</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
                         href="services/advisory/human-capital-management"
                         >Human Capital Management</a
                       >
@@ -165,26 +196,47 @@
                       <a
                         class="nav-link"
                         href="services/audit-assurance/agreed-upon"
-                        >Agreed Upon Procedures</a
+                        >Special Purpose Audit</a
                       >
                     </p>
-                    <!-- <p>
+                    <p>
                       <a class="nav-link" href="services/audit-assurance/featured-insights"
-                        >Features Insights</a
+                        >Private Client Audit</a
                       >
-                    </p> -->
+                    </p>
                     <p>
                       <a
                         class="nav-link"
                         href="services/audit-assurance/financial-statement"
-                        >Financial Statement Audits</a
+                        >Statutory Audit</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/performance-audit"
+                        >Performance Audit</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/forensic-integrity"
+                        >Forensic & Integrity Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/audit-assurance/value-for-money"
+                        >Value for Money (VFM)</a
                       >
                     </p>
                     <p>
                       <a
                         class="nav-link"
                         href="services/audit-assurance/international-financial"
-                        >International Financial Reporting Standards</a
+                        >International Financial Reporting Standards(IFRS)</a
                       >
                     </p>
                   </div>
@@ -193,27 +245,6 @@
                     class="submenu-content"
                   >
                     <h5>Tax</h5>
-                    <p>
-                      <a
-                        class="nav-link"
-                        href="services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2019"
-                        >BDO Nigeria - Tax Bulletin on Finance Act 2019</a
-                      >
-                    </p>
-                    <p>
-                      <a
-                        class="nav-link"
-                        href="services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2020"
-                        >BDO Nigeria - Tax Bulletin on Finance Act 2010</a
-                      >
-                    </p>
-                    <p>
-                      <a
-                        class="nav-link"
-                        href="services/tax/federal-tax-matters"
-                        >Federal Tax Matters</a
-                      >
-                    </p>
                     <p>
                       <a class="nav-link" href="services/tax/payroll-services"
                         >Payroll Services</a
@@ -234,8 +265,61 @@
                       >
                     </p>
                     <p>
-                      <a class="nav-link" href="services/tax/tax-due-diligence"
-                        >Tax Due Diligence</a
+                      <a class="nav-link" href="services/tax/tax-audit-&-investigation-support"
+                        >Tax Audit & Investigation Support</a
+                      >
+                    </p>
+                    
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/tax-intervention-services"
+                        >Tax Intervention Services</a
+                      >
+                    </p>
+                    
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/international-tax-services"
+                        >International Tax Services</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/tax-training"
+                        >Tax Training & Education</a
+                      >
+                    </p>
+                    
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/transfer-pricing"
+                        >Transfer Pricing</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/tax-health-check-&-risk-assessment"
+                        >Tax Health Check</a
+                      >
+                    </p>
+                    
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/"
+                        >Tax Incentives Assistance</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="services/tax/other-compliance"
+                        >Other Compliance (ITF, Pencom, ECC, Stamp Duty, NITDA etc)</a
                       >
                     </p>
                   </div>
@@ -271,7 +355,7 @@
                     >
                   </h5>
                   <ul class="list-unstyled">
-                    <li
+                    <!-- <li
                       data-submenu="blog"
                       (mouseover)="onSidebarHover('consumer-business')"
                       [class.active]="currentSubmenu === 'consumer-business'"
@@ -279,14 +363,23 @@
                       <a class="nav-link" href="industries/consumer-business"
                         ><i class="fas fa-arrow-right"></i> Consumer Business</a
                       >
-                    </li>
+                    </li> -->
+                    <li
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/fast-moving-consumer-goods"
+                      > FMCG</a
+                    >
+                  </li>
                     <li
                       data-submenu="blog-single"
                       (mouseover)="onSidebarHover('financial-services')"
                       [class.active]="currentSubmenu === 'blog-single'"
                     >
                       <a class="nav-link" href="industries/financial-services"
-                        ><i class="fas fa-arrow-right"></i> Financial
+                        > Financial
                         Services</a
                       >
                     </li>
@@ -309,14 +402,14 @@
                       >
                     </li>
                     <li
-                      data-submenu="blog-single"
-                      (mouseover)="onSidebarHover('financial-services')"
-                      [class.active]="currentSubmenu === 'blog-single'"
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/extractive"
+                      > Extractive</a
                     >
-                      <a class="nav-link" href="industries/natural-resources">
-                        Natural Resources</a
-                      >
-                    </li>
+                  </li>
                     <li
                       data-submenu="blog-single"
                       (mouseover)="onSidebarHover('financial-services')"
@@ -327,21 +420,21 @@
                       >
                     </li>
                     <li
-                      data-submenu="blog-single"
-                      (mouseover)="onSidebarHover('financial-services')"
-                      [class.active]="currentSubmenu === 'blog-single'"
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/government"
+                      > Government</a
                     >
-                      <a class="nav-link" href="industries/public-sector"
-                        >Public Sector</a
-                      >
-                    </li>
+                  </li>
                     <li
                       data-submenu="blog-single"
                       (mouseover)="onSidebarHover('financial-services')"
                       [class.active]="currentSubmenu === 'blog-single'"
                     >
-                      <a class="nav-link" href="industries/public-sector"
-                        >Public Sector</a
+                      <a class="nav-link" href="industries/oil-&-gas"
+                        >Oil & Gas</a
                       >
                     </li>
                     <li
@@ -379,8 +472,8 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-md-9 nested-content">
-                  <div
+                <!-- <div class="col-md-9 nested-content"> -->
+                  <!-- <div
                     *ngIf="currentSubmenu === 'consumer-business'"
                     class="submenu-content"
                   >
@@ -406,8 +499,8 @@
                         >Retail</a
                       >
                     </p>
-                  </div>
-                  <div
+                  </div> -->
+                  <!-- <div
                     *ngIf="currentSubmenu === 'financial-services'"
                     class="submenu-content"
                   >
@@ -419,8 +512,8 @@
                         >Asset Management</a
                       >
                     </p>
-                  </div>
-                </div>
+                  </div> -->
+                <!-- </div> -->
               </div>
             </div>
           </li>

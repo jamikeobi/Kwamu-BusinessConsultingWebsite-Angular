@@ -12066,6 +12066,7 @@ fieldset:disabled .btn {
 
 .fa-angle-double-right:before {
     content: "\f101";
+    color: #007bff;
 }
 
 .fa-angle-double-up:before {
@@ -18125,7 +18126,7 @@ p.white {
     text-transform: uppercase;
     display: inline-block;
     line-height: 24px;
-    color: black !important;
+    color: #244B7E !important;
 }
 
 a.read {
@@ -20663,7 +20664,7 @@ div#owl-demo2 .owl-dots,
 /*--/foorer--*/
 
 .w3l-footer-29-main .footer-29 {
-    background: var(--footer-bg);
+    background: #011b3d;
 }
 
 .w3l-footer-29-main h6.footer-title-29 {

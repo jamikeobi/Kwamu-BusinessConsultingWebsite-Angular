@@ -12,16 +12,10 @@ import { InsightsComponent } from './pages/insights/insights/insights.component'
 import { AboutComponent } from './pages/about/about/about.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 import { TaxComponent } from './pages/services/services/tax/tax.component';
-import { BdoNigeria2019Component } from './pages/services/services/tax/bdo-nigeria2019/bdo-nigeria2019.component';
-import { BdoNigeria2020Component } from './pages/services/services/tax/bdo-nigeria2020/bdo-nigeria2020.component';
-import { FederalTaxComponent } from './pages/services/services/tax/federal-tax/federal-tax.component';
 import { PayrollServicesComponent } from './pages/services/services/tax/payroll-services/payroll-services.component';
 import { TaxAdvisoryServicesComponent } from './pages/services/services/tax/tax-advisory-services/tax-advisory-services.component';
-import { TaxDueDiligenceComponent } from './pages/services/services/tax/tax-due-diligence/tax-due-diligence.component';
 import { ManufacturingComponent } from './pages/industries/industries/manufacturing/manufacturing.component';
-import { NaturalResourcesComponent } from './pages/industries/industries/natural-resources/natural-resources.component';
 import { NotForProfitComponent } from './pages/industries/industries/not-for-profit/not-for-profit.component';
-import { PublicSectorComponent } from './pages/industries/industries/public-sector/public-sector.component';
 import { RealEstateConstructionComponent } from './pages/industries/industries/real-estate-construction/real-estate-construction.component';
 import { TechnologyTelecommunicationComponent } from './pages/industries/industries/technology-telecommunication/technology-telecommunication.component';
 import { TransportComponent } from './pages/industries/industries/transport/transport.component';
@@ -45,9 +39,6 @@ import { FinancialServicesComponent } from './pages/industries/industries/financ
 import { HealthcareComponent } from './pages/industries/industries/healthcare/healthcare.component';
 import { InternationalFinancialComponent } from './pages/services/services/audit-assurance/international-financial/international-financial.component';
 import { AccountingAdvisoryComponent } from './pages/services/services/audit-assurance/accounting-advisory/accounting-advisory.component';
-import { AgreedUponComponent } from './pages/services/services/audit-assurance/agreed-upon/agreed-upon.component';
-import { FeaturedInsightsComponent } from './pages/services/services/audit-assurance/featured-insights/featured-insights.component';
-import { FinancialStatementComponent } from './pages/services/services/audit-assurance/financial-statement/financial-statement.component';
 import { AboutBdoNigeriaComponent } from './pages/about/about/about-bdo-nigeria/about-bdo-nigeria.component';
 import { GlobalNetworkComponent } from './pages/about/about/global-network/global-network.component';
 import { PeopleValueComponent } from './pages/about/about/people-value/people-value.component';
@@ -59,6 +50,32 @@ import { BdoCoporateProfileComponent } from './pages/about/about/bdo-coporate-pr
 import { CardComponent } from './pages/insights/insights/card/card.component';
 import { BreakingDataSilosComponent } from './pages/insights/insights/breaking-data-silos/breaking-data-silos.component';
 import { ExcelComponent } from './pages/insights/insights/excel/excel.component';
+import { BusinessFinanceComponent } from './pages/services/services/advisory/business-finance/business-finance.component';
+import { TransactionAdvisoryComponent } from './pages/services/services/advisory/transaction-advisory/transaction-advisory.component';
+import { RiskManagementComponent } from './pages/services/services/advisory/risk-management/risk-management.component';
+import { WealthmanagementComponent } from './pages/services/services/advisory/wealthmanagement/wealthmanagement.component';
+import { RetirementPensionComponent } from './pages/services/services/advisory/retirement-pension/retirement-pension.component';
+import { PerformanceAuditComponent } from './pages/services/services/audit-assurance/performance-audit/performance-audit.component';
+import { ForensicIntegrityComponent } from './pages/services/services/audit-assurance/forensic-integrity/forensic-integrity.component';
+import { ValueForMoneyComponent } from './pages/services/services/audit-assurance/value-for-money/value-for-money.component';
+import { TaxAuditComponent } from './pages/services/services/tax/tax-audit/tax-audit.component';
+import { TaxInterventionComponent } from './pages/services/services/tax/tax-intervention/tax-intervention.component';
+import { InternationalTaxComponent } from './pages/services/services/tax/international-tax/international-tax.component';
+import { TaxTrainingComponent } from './pages/services/services/tax/tax-training/tax-training.component';
+import { TransferPricingComponent } from './pages/services/services/tax/transfer-pricing/transfer-pricing.component';
+import { TaxHealthCheckComponent } from './pages/services/services/tax/tax-health-check/tax-health-check.component';
+import { TaxIncentivesComponent } from './pages/services/services/tax/tax-incentives/tax-incentives.component';
+import { OtherComplianceComponent } from './pages/services/services/tax/other-compliance/other-compliance.component';
+import { SidebarComponent } from './pages/services/services/advisory/sidebar/sidebar.component';
+import { SpecialPurposeComponent } from './pages/services/services/audit-assurance/special-purpose/special-purpose.component';
+import { PrivateClientComponent } from './pages/services/services/audit-assurance/private-client/private-client.component';
+import { StatutoryAuditsComponent } from './pages/services/services/audit-assurance/statutory-audits/statutory-audits.component';
+import { AuditSidebarComponent } from './pages/services/services/audit-assurance/audit-sidebar/audit-sidebar.component';
+import { TaxSidebarComponent } from './pages/services/services/tax/tax-sidebar/tax-sidebar.component';
+import { FMCGComponent } from './pages/industries/industries/fmcg/fmcg.component';
+import { ExtractiveComponent } from './pages/industries/industries/extractive/extractive.component';
+import { GovernmentComponent } from './pages/industries/industries/government/government.component';
+import { OilGasComponent } from './pages/industries/industries/oil-gas/oil-gas.component';
 
 @NgModule({
   declarations: [
@@ -83,18 +100,11 @@ import { ExcelComponent } from './pages/insights/insights/excel/excel.component'
     PlanningPolicyComponent,
     AuditAssuranceComponent,
     AccountingAdvisoryComponent,
-    AgreedUponComponent,
-    FeaturedInsightsComponent,
-    FinancialStatementComponent,
     InternationalFinancialComponent,
     TaxComponent,
-    BdoNigeria2019Component,
-    BdoNigeria2020Component,
-    FederalTaxComponent,
     PayrollServicesComponent,
     TaxAdvisoryServicesComponent,
     TaxComplianceServicesComponent,
-    TaxDueDiligenceComponent,
     ConsumerBusinessComponent,
     ConsumerProductsComponent,
     GamingHospitalityLeisureComponent,
@@ -103,9 +113,7 @@ import { ExcelComponent } from './pages/insights/insights/excel/excel.component'
     AssetManagementComponent,
     HealthcareComponent,
     ManufacturingComponent,
-    NaturalResourcesComponent,
     NotForProfitComponent,
-    PublicSectorComponent,
     RealEstateConstructionComponent,
     TechnologyTelecommunicationComponent,
     TransportComponent,
@@ -118,7 +126,33 @@ import { ExcelComponent } from './pages/insights/insights/excel/excel.component'
     BdoCoporateProfileComponent,
     CardComponent,
     BreakingDataSilosComponent,
-    ExcelComponent
+    ExcelComponent,
+    BusinessFinanceComponent,
+    TransactionAdvisoryComponent,
+    RiskManagementComponent,
+    WealthmanagementComponent,
+    RetirementPensionComponent,
+    PerformanceAuditComponent,
+    ForensicIntegrityComponent,
+    ValueForMoneyComponent,
+    TaxAuditComponent,
+    TaxInterventionComponent,
+    InternationalTaxComponent,
+    TaxTrainingComponent,
+    TransferPricingComponent,
+    TaxHealthCheckComponent,
+    TaxIncentivesComponent,
+    OtherComplianceComponent,
+    SidebarComponent,
+    SpecialPurposeComponent,
+    PrivateClientComponent,
+    StatutoryAuditsComponent,
+    AuditSidebarComponent,
+    TaxSidebarComponent,
+    FMCGComponent,
+    ExtractiveComponent,
+    GovernmentComponent,
+    OilGasComponent
   ],
   imports: [
     BrowserModule,
