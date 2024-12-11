@@ -66,6 +66,7 @@ import { FMCGComponent } from './pages/industries/industries/fmcg/fmcg.component
 import { ExtractiveComponent } from './pages/industries/industries/extractive/extractive.component';
 import { OilGasComponent } from './pages/industries/industries/oil-gas/oil-gas.component';
 import { GovernmentComponent } from './pages/industries/industries/government/government.component';
+import { DashboardComponent } from './pages/contact/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -139,13 +140,14 @@ const routes: Routes = [
 
   //About Sub menu
   {path:'about', component: AboutComponent},
-  {path:'about/about-BDO-nigeria', component: AboutBdoNigeriaComponent},
-  {path:'about/global-network', component: GlobalNetworkComponent},
+  {path:'about/about-KWAMU-nigeria', component: AboutBdoNigeriaComponent},
+  {path:'about/vision-mission', component: GlobalNetworkComponent},
   {path:'about/people-value', component: PeopleValueComponent},
-  {path:'about/why-bdo', component: WhyBdoComponent},
+  {path:'about/value-proposition', component: WhyBdoComponent},
   {path:'about/our-alumni', component: OurAlumniComponent},
   {path:'about/corporate-profile', component: BdoCoporateProfileComponent},
-  {path:'contact', component: ContactComponent}
+  {path:'contact', component: ContactComponent},
+  {path:'IC', component: DashboardComponent}
 ];
 
 @NgModule({

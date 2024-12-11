@@ -1,0 +1,19 @@
+.section-title{
+    font-size: 30px;
+    text-align: center; /* Centers the text */
+    margin: 0 auto; /* Ensures it is centered in its container */
+    color: #254C7F; /* Initial text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+.section-title:hover{
+    color: #007bff !important; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+p{
+    color: black;
+}
+
+h3{
+    color: #254C7F;
+}

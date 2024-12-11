@@ -1,0 +1,29 @@
+/* General Styles for Cards */
+.info-card {
+    background-color: #fff; /* White background for distinction */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Inner spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  
+  /* Hover Effect for Cards */
+  .info-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+  
+  /* Text Styling */
+  .info-card p {
+    margin: 0; /* Remove default margins */
+    color: #333; /* Neutral text color */
+    line-height: 1.6; /* Comfortable line spacing */
+    font-size: 1rem; /* Default text size */
+  }
+  
+  /* Section Styling */
+  .container.section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  

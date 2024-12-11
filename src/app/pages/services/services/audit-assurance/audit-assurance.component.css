@@ -57,7 +57,6 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    background-color: #f1f1f1; /* Light grey background for sidebar */
     padding: 20px; /* Padding inside sidebar */
     border-radius: 10px; /* Rounded corners */
 }

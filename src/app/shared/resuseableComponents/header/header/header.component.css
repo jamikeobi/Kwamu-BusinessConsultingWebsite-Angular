@@ -29,7 +29,7 @@ header{
     font-size: 13px;
     width: 90vw; /* Width of the dropdown menu */
     padding: 3px; /* Adjusted padding for a more compact look */
-    background-color: #f0f4f8; /* Softer background color for the dropdown */
+    background-color: #3e8ad7; /* Softer background color for the dropdown */
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: none; /* Hide the dropdown menu by default */
@@ -48,7 +48,7 @@ header{
 .mega-dropdown .dropdown-menu .sidebar {
     max-width: 320px; /* Increased width for better visibility */
     width: 100%; /* Allow full width usage */
-    background: linear-gradient(180deg, #ffffff, #e7eff6); /* Lighter gradient for a cleaner look */
+    background: linear-gradient(180deg, #254C7F, #4682b6); /* Lighter gradient for a cleaner look */
     border-radius: 12px;
     border-right: 2px solid #ccc;
     padding: 30px; /* Ample padding for better spacing */
@@ -60,7 +60,7 @@ header{
 .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
     font-size: 1.5em;
     font-weight: 700;
-    color: #333;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -89,10 +89,10 @@ header{
 
 /* Sidebar item links */
 .mega-dropdown .dropdown-menu .sidebar li a {
-    color: #333;
+    color: black;
     font-weight: 600;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 0.9em;
     text-decoration: none;
     transition: color 0.3s ease;
     display: flexbox;
@@ -125,7 +125,7 @@ header{
 /* Nested content styling */
 .mega-dropdown .dropdown-menu .nested-content {
     padding-left: 30px; /* Indent for nested content */
-    color: #444;
+    color: black;
     display: block;
     transition: all 0.3s ease;
 }
@@ -133,14 +133,23 @@ header{
 .mega-dropdown .dropdown-menu .nested-content h5 {
     font-size: 1.6em; /* Increased heading size */
     font-weight: 700;
-    color: #333;
+    color: black;
     margin-bottom: 10px; /* Reduced margin */
 }
 
 .mega-dropdown .dropdown-menu .nested-content p {
     font-size: 1em; /* Maintain font size for paragraphs */
     line-height: 1;
-    color: #555;
+    color: black;
+}
+
+#about-nested{
+    display: block;
+    text-align: center;
+    align-content: center;
+}
+#about-nested p{
+    /* margin: 30px; */
 }
 
 .mega-dropdown .dropdown-menu .nested-content ul {
@@ -155,13 +164,13 @@ header{
 }
 
 .mega-dropdown .dropdown-menu .nested-content ul li a {
-    color: #333;
+    color: black;
     font-size: 10px;
     text-decoration: none;
 }
 
 .mega-dropdown .dropdown-menu .nested-content ul li a:hover {
-    color: #254C7F; /* Change color on hover */
+    color: #fff; /* Change color on hover */
     text-decoration: underline; /* Underline on hover */
 }
 

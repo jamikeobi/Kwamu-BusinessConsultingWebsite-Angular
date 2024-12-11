@@ -13,7 +13,12 @@
     color: #333; /* Optional: Set text color */
     text-decoration: none; /* Remove underline from links */
 }
-
+.banner-info a{
+  background-color: #254C7F;
+}
+.banner-info a:hover{
+  background-color: #3d85e2;
+}
 .same-style a {
     color: inherit; /* Inherit color from parent */
     text-decoration: none; /* Remove underline */
@@ -24,6 +29,20 @@
 }
 .same-style i {
     margin-left: 5px; /* Adds space between the text and the icon */
+}
+
+/* Header styling */
+.title-subw3hny {
+  font-size: 30px;
+  text-align: center; /* Centers the text */
+  margin: 0 auto; /* Ensures it is centered in its container */
+  color: #333; /* Initial text color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.title-subw3hny:hover {
+  color: #007bff !important; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
 }
 
 

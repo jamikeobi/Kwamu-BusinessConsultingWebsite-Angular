@@ -76,6 +76,12 @@ import { FMCGComponent } from './pages/industries/industries/fmcg/fmcg.component
 import { ExtractiveComponent } from './pages/industries/industries/extractive/extractive.component';
 import { GovernmentComponent } from './pages/industries/industries/government/government.component';
 import { OilGasComponent } from './pages/industries/industries/oil-gas/oil-gas.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './pages/contact/dashboard/dashboard.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -152,11 +158,14 @@ import { OilGasComponent } from './pages/industries/industries/oil-gas/oil-gas.c
     FMCGComponent,
     ExtractiveComponent,
     GovernmentComponent,
-    OilGasComponent
+    OilGasComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

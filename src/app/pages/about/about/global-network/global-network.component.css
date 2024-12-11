@@ -1,0 +1,56 @@
+/* General Styles */
+.section-title{
+    font-size: 30px;
+    text-align: center; /* Centers the text */
+    margin: 0 auto; /* Ensures it is centered in its container */
+    color: #254C7F; /* Initial text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+.section-title:hover{
+    color: #007bff !important; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+.card {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #e0e0e0; /* Soft border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Ensure adequate padding inside the card */
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 200px;
+  }
+  
+  /* Add shadow effect */
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title styling */
+  .card-title {
+    color: #007bff; /* Dark color for readability */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase; /* For a formal look */
+  }
+  
+  /* Text styling */
+  .card-text {
+    color: #555; /* Neutral color for text */
+    font-size: 1rem;
+    line-height: 1.6; /* Comfortable line spacing */
+    margin: 0 10px; /* Horizontal margin for spacing */
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .card {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 1.25rem;
+    }
+    .card-text {
+      font-size: 0.95rem;
+    }
+  }
+  

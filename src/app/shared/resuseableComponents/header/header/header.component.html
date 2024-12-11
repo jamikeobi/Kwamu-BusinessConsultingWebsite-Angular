@@ -517,9 +517,6 @@
               </div>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/insights" role="button"> Insights </a>
-          </li>
           <li class="nav-item dropdown mega-dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -553,8 +550,8 @@
                       (mouseover)="onSidebarHover('blog')"
                       [class.active]="currentSubmenu === 'blog'"
                     >
-                      <a class="nav-link" href="/about/about-BDO-nigeria"
-                        ><i class="fas fa-arrow-right"></i> About BDO Nigeria</a
+                      <a class="nav-link" href="/about/about-KWAMU-nigeria"
+                        ><i class="fas fa-arrow-right"></i> About Kwamu Nigeria</a
                       >
                     </li>
                     <li
@@ -562,8 +559,8 @@
                       (mouseover)="onSidebarHover('global')"
                       [class.active]="currentSubmenu === 'blog-single'"
                     >
-                      <a class="nav-link" href="/about/global-network"
-                        ><i class="fas fa-arrow-right"></i> Global Network</a
+                      <a class="nav-link" href="/about/vision-mission"
+                        ><i class="fas fa-arrow-right"></i> Vision & Mission</a
                       >
                     </li>
                     <li
@@ -571,7 +568,7 @@
                       (mouseover)="onSidebarHover('people')"
                       [class.active]="currentSubmenu === 'email'"
                     >
-                      <a class="nav-link" href="/about/poeple-value"
+                      <a class="nav-link" href="/about/people-value"
                         ><i class="fas fa-arrow-right"></i> People & Value</a
                       >
                     </li>
@@ -580,8 +577,8 @@
                       (mouseover)="onSidebarHover('why')"
                       [class.active]="currentSubmenu === 'email'"
                     >
-                      <a class="nav-link" href="/about/why-bdo"
-                        ><i class="fas fa-arrow-right"></i> Why BDO</a
+                      <a class="nav-link" href="/about/value-proposition"
+                        ><i class="fas fa-arrow-right"></i> Value Proposition</a
                       >
                     </li>
                   </ul>
@@ -590,31 +587,33 @@
                   <div
                     *ngIf="currentSubmenu === 'blog'"
                     class="submenu-content"
+                    id="about-nested"
                   >
-                    <h5>About BDO Nigeria</h5>
+                    <h5>About Kwamu Nigeria</h5>
                     <p style="font-size: 15px">
-                      The firm of Oyediran Faleye Oke Co was registered to
+                      KWAMU & CO.(KWAMU) is a professional services firm 
                       <br />
-                      practise as a firm of Chartered Accountants in Nigeria in
+                      registered under the laws of the Federal Republic of Nigeria
                       <br />
-                      1973.
                     </p>
                   </div>
                   <div
                     *ngIf="currentSubmenu === 'global'"
                     class="submenu-content"
+                    id="about-nested"
                   >
-                    <h5>Global Network</h5>
+                    <h5>Vision & Mission</h5>
                     <p style="font-size: 15px">
-                      BDO is an international network of public accounting, tax
+                      ‘‘to become a World class Professional Service Firm’’
+                      <br /> <br> <br>
+                      “to be the leader in the provision of value adding professional services to clients,
                       <br />
-                      and advisory firms which perform professional services
-                      <br />
-                      under the name of BDO.
+                      while ensuring growth to clients, employees, owners, and firm”
                     </p>
                   </div>
                   <div
                     *ngIf="currentSubmenu === 'people'"
+                    id="about-nested"
                     class="submenu-content"
                   >
                     <h5>People & Value</h5>
@@ -626,20 +625,22 @@
                       university graduates).
                     </p>
                   </div>
-                  <div *ngIf="currentSubmenu === 'why'" class="submenu-content">
-                    <h5>Why BDO</h5>
+                  <div *ngIf="currentSubmenu === 'why'" class="submenu-content" id="about-nested">
+                    <h5>Value Proposition</h5>
                     <p style="font-size: 15px">
-                      At BDO, we believe that our new ideas and innovative
+                      KWAMU is dedicated to delivering transformative 
                       <br />
-                      thinking help clients achieve their objectives and <br />
-                      contribute to their commercial success – now and in the
+                      results that drive profitability,<br />
+                      efficiency, and sustainable growth. 
                       <br />
-                      future.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact" role="button"> Contact Us </a>
           </li>
         </ul>
         <!-- <ul class="header-search me-lg-4">

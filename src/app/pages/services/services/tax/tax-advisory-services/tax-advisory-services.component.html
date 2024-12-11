@@ -50,43 +50,29 @@
   <div class="blog py-5" id="Newsblog">
     <div class="container py-lg-5 py-md-4 py-2">
       <div class="row">
+        <!-- Blog Content -->
         <div class="col-lg-8 bloghnypage-left blog-single-post">
-          <!-- <div class="single-post-image mb-4">
-                                <img src="assets/images/banner2.jpg" class="img-fluid w-100 radius-image" alt="blog-post-image">
-                            </div> -->
           <div class="blog-content">
-           <!-- Tax Advisory -->
-           <h4
-           class="post-content-title mb-3"
-           style="font-size: 20px; color: black"
-         >
-           Tax Advisory & Planning
-         </h4>
-         <p class="mb-4">
-           Offering strategic advice to optimize tax positions, manage risks,
-           and enhance compliance. Our tax experts provide tailored tax
-           planning solutions, helping clients minimize tax liabilities while
-           remaining compliant with regulations.
-         </p>
-         <!-- List -->
-         <ul class="bullet-points mt-4">
-           <li><span class="fas fa-flag"></span> Corporate Tax Planning</li>
-           <li>
-             <span class="fas fa-check-circle"></span> Personal Tax Advisory
-           </li>
+            <!-- Tax Advisory & Planning -->
+            <div class="info-card mb-4">
+              <h4 class="post-content-title mb-3" style="font-size: 20px; color: black;">
+                Tax Advisory & Planning
+              </h4>
+              <p>
+                Offering strategic advice to optimize tax positions, manage risks, and enhance compliance. Our tax experts provide tailored tax planning solutions, helping clients minimize tax liabilities while remaining compliant with regulations.
+              </p>
+            </div>
 
-           <li>
-             <span class="fas fa-check-circle"></span> Tax Risk Management
-           </li>
-           <li>
-             <span class="fas fa-check-circle"></span> Tax Efficiency
-             Strategies
-           </li>
-           <li>
-             <span class="fas fa-check-circle"></span> Succession Planning
-           </li>
-         </ul>
-         <!-- Tax Advisory -->
+            <!-- Services List -->
+            <div class="info-card mb-4">
+              <ul class="bullet-points mt-4">
+                <li><span class="fas fa-flag"></span> Corporate Tax Planning</li>
+                <li><span class="fas fa-check-circle"></span> Personal Tax Advisory</li>
+                <li><span class="fas fa-check-circle"></span> Tax Risk Management</li>
+                <li><span class="fas fa-check-circle"></span> Tax Efficiency Strategies</li>
+                <li><span class="fas fa-check-circle"></span> Succession Planning</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -94,50 +80,12 @@
         <div class="col-lg-4 blog-w3hny-right ps-lg-5">
           <aside class="sidebar">
             <!-- Sidebar Content -->
-            <div class="sidebar-widget">
-              <h1>Our Area</h1>
-              <ul class="sidebar-updates">
-                <li>
-                  <a
-                    href="/services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2019"
-                    >BDO Nigeria - Tax Bulletin on Finance Act 2019</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a
-                    href="/services/tax/BDO-nigeria-tax-bulletin-on-finance-act-2020"
-                    >BDO Nigeria - Tax Bulletin on Finance Act 2020</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a href="/services/tax/federal-tax-matters"
-                    >Federal Tax Matters</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a href="/services/tax/payroll-services">Payroll Services</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a href="/services/tax/tax-advisory-services"
-                    >Tax Advisory Services</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a href="/services/tax/tax-compliance-services"
-                    >Tax Compliance Services</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-                <li>
-                  <a href="/services/tax/tax-due-diligence">Tax Due Diligence</a
-                  ><span><i class="fa-solid fa-angle-right"></i></span>
-                </li>
-              </ul>
-            </div>
+            <app-tax-sidebar></app-tax-sidebar>
           </aside>
         </div>
-        <!-- Sidebar Content -->
+        <!-- Sidebar Ends -->
       </div>
     </div>
   </div>
 </section>
+

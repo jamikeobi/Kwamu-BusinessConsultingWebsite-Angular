@@ -2,3 +2,92 @@
 a{
     text-decoration: none !important;
 }
+p{
+  color: black;
+}
+.sidebar{
+    background-color: #a4c5f0 !important;
+}
+
+/* Header styling */
+.title-subw3hny {
+    font-size: 30px;
+    text-align: center; /* Centers the text */
+    margin: 0 auto; /* Ensures it is centered in its container */
+    color: #333; /* Initial text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .title-subw3hny:hover {
+    color: #007bff !important; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+  }
+  
+
+  .post-content-title{
+    font-size: 25px !important;
+    color: #031a32 !important;
+  }
+  .post-content-title:hover{
+    color: #007bff !important;
+    }
+
+
+    /* General Styles for Cards */
+.info-card {
+  background-color: #fff; /* White background for distinction */
+  border-radius: 8px; /* Rounded corners for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Inner spacing for content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+/* Hover Effect for Cards */
+.info-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Text Styling */
+.info-card p {
+  margin: 0; /* Remove default margins */
+  color: #333; /* Neutral text color */
+  line-height: 1.6; /* Comfortable line spacing */
+  font-size: 1rem; /* Default text size */
+}
+
+.info-card h4 {
+  font-size: 1.25rem; /* Slightly larger heading */
+  color: #1A3B66; /* Darker blue for headings */
+}
+
+/* List Styling */
+.info-card ul {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.info-card ul li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center; /* Align icons and text */
+}
+
+.info-card ul li span {
+  color: #007bff; /* Blue color for icons */
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.2rem;
+}
+
+/* Section Styling */
+.blog {
+  background-color: #f9f9f9; /* Light gray background for the section */
+}
+
+.container {
+  margin-top: 20px;
+}
