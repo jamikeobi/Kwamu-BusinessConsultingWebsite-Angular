@@ -1,29 +1,30 @@
-header{
+header {
     background: #011b3d;
     backdrop-filter: blur(10px);
     /* border: 1px solid white; */
-    padding:0px;
+    padding: 0px;
+    /* margin-bottom: 30px; */
 }
 
-.nav-link{
+.nav-link {
     padding: 5px !important;
 }
 
 .navbar-collapse {
     display: none;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar-collapse.show {
+}
+
+.navbar-collapse.show {
     display: block;
-  }
-  
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .navbar-collapse {
-      display: flex !important;
+        display: flex !important;
     }
-  }
-  
+}
+
 /* Mega Dropdown Styles */
 .mega-dropdown .dropdown-menu {
     font-size: 13px;
@@ -35,6 +36,9 @@ header{
     display: none; /* Hide the dropdown menu by default */
     top: 100%;
     transition: all 0.3s ease;
+    max-height: 70vh; /* Ensure it's scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
+    min-width: 100%; /* Ensure it stretches across the entire width */
 }
 
 /* Show the dropdown on hover */
@@ -77,13 +81,13 @@ header{
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.submenu-content a{
+.submenu-content a {
     cursor: pointer;
     text-decoration: none;
     color: black;
-
 }
-.submenu-content a:hover{
+
+.submenu-content a:hover {
     color: #011024 !important;
 }
 
@@ -143,12 +147,13 @@ header{
     color: black;
 }
 
-#about-nested{
+#about-nested {
     display: block;
     text-align: center;
     align-content: center;
 }
-#about-nested p{
+
+#about-nested p {
     /* margin: 30px; */
 }
 
@@ -189,76 +194,105 @@ header{
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 1.4em; /* Smaller title font size */
+        font-size: 1.4em;
+        margin-bottom: 10px; /* Added spacing */
     }
 
     .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 1em; /* Smaller link font size */
+        font-size: 1em;
+        padding: 5px 10px; /* Adjusted spacing */
     }
 
     .mega-dropdown .dropdown-menu .nested-content h5 {
-        font-size: 1.4em; /* Smaller heading size */
+        font-size: 1.4em;
     }
 
     .mega-dropdown .dropdown-menu .nested-content p,
     .mega-dropdown .dropdown-menu .nested-content ul li a {
-        font-size: 0.9em; /* Smaller paragraph and link font size */
+        font-size: 0.9em;
+        line-height: 1.4; /* Better readability */
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
     }
 }
 
 @media (max-width: 720px) {
     .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 1.2em; /* Even smaller title font size */
+        font-size: 1.2em;
+        text-align: center; /* Center alignment */
     }
 
     .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.9em; /* Smaller link font size */
+        font-size: 0.9em;
+        padding: 5px; /* Reduced padding */
     }
 
     .mega-dropdown .dropdown-menu .nested-content h5 {
-        font-size: 1.2em; /* Smaller heading size */
+        font-size: 1.2em;
+        margin-bottom: 8px; /* Better spacing */
     }
 
     .mega-dropdown .dropdown-menu .nested-content p,
     .mega-dropdown .dropdown-menu .nested-content ul li a {
-        font-size: 0.8em; /* Smaller paragraph and link font size */
+        font-size: 0.8em;
+        line-height: 1.3;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
     }
 }
 
 @media (max-width: 420px) {
     .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 1em; /* Title font size for mobile */
+        font-size: 1em;
+        text-align: left; /* Adjust alignment */
+        padding: 5px 0; /* Reduce padding */
     }
 
     .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.8em; /* Smaller link font size */
+        font-size: 0.8em;
+        margin: 3px 0; /* Reduced margin for compact layout */
     }
 
     .mega-dropdown .dropdown-menu .nested-content h5 {
-        font-size: 1em; /* Smaller heading size */
+        font-size: 1em;
+        font-weight: bold; /* Emphasize headers */
     }
 
     .mega-dropdown .dropdown-menu .nested-content p,
     .mega-dropdown .dropdown-menu .nested-content ul li a {
-        font-size: 0.7em; /* Smaller paragraph and link font size */
+        font-size: 0.7em;
+        line-height: 1.2;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
     }
 }
 
 @media (max-width: 320px) {
     .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 0.9em; /* Smaller title font size for very small screens */
+        font-size: 0.9em;
+        padding: 5px; /* Compact spacing */
     }
 
     .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.7em; /* Smaller link font size */
+        font-size: 0.7em;
     }
 
     .mega-dropdown .dropdown-menu .nested-content h5 {
-        font-size: 0.9em; /* Smaller heading size */
+        font-size: 0.9em;
     }
 
     .mega-dropdown .dropdown-menu .nested-content p,
     .mega-dropdown .dropdown-menu .nested-content ul li a {
-        font-size: 0.6em; /* Smaller paragraph and link font size */
+        font-size: 0.6em;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
     }
 }

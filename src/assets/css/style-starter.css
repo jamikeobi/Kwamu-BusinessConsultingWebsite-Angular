@@ -4783,7 +4783,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-toggler {
-    color: rgba(0, 0, 0, .55);
+    color: #007bff;
     border-color: rgba(0, 0, 0, .1)
 }
 
@@ -18734,11 +18734,14 @@ a.dropdown-item.active {
         width: 34px;
         height: 34px;
         display: inline-block;
-        background: #272121;
+        background: #084298;
+        color: black !important;
         border-radius: 4px;
         text-align: center;
     }
-
+    .navbar-toggler span{
+        color: #000;
+    }
     .navbar-toggler-icon.fa {
         font-size: 20px;
         line-height: 1.2em;

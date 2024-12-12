@@ -20,8 +20,16 @@
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-</head>
 
+  <style>
+    /* Ensuring the page scrolls correctly if there's overflow in the header */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Ensure vertical scroll is available */
+}
+
+  </style>
+</head>
 <body>
   <app-root></app-root>
 
