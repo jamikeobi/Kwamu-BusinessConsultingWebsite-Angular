@@ -1,0 +1,468 @@
+<header id="site-header" class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+      <h1>
+        <a class="navbar-brand pe-xl-5 pe-lg-4" href="/home">
+          <img src="../../../../../assets/images/KWAMU Logo.png" alt="" />
+        </a>
+      </h1>
+      <button
+      class="navbar-toggler"
+      type="button"
+      aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li class="nav-item dropdown mega-dropdown">
+            <!-- Parent Dropdown -->
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              (click)="toggleServicesDropdown($event)"
+            >
+              Services
+            </a>
+            <!-- Mega Dropdown Menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Sidebar Navigation -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/services"
+                      style="text-decoration: none; color: black"
+                    >
+                      Services
+                    </a>
+                  </h5>
+                  <ul class="list-unstyled">
+                    <li
+                      data-submenu="advisory"
+                      (click)="toggleSubmenu('advisory')"
+                      (mouseover)="isDesktop ? onSidebarHover('advisory') : null"
+                      [class.active]="currentSubmenu === 'advisory'"
+                    >
+                      <a class="nav-link">
+                        <i class="fas fa-arrow-right"></i> Advisory
+                      </a>
+                    </li>
+                    <li
+                      data-submenu="audit"
+                      (click)="toggleSubmenu('audit')"
+                      (mouseover)="isDesktop ? onSidebarHover('audit') : null"
+                      [class.active]="currentSubmenu === 'audit'"
+                    >
+                      <a class="nav-link">
+                        <i class="fas fa-arrow-right"></i> Audit & Assurance
+                      </a>
+                    </li>
+                    <li
+                      data-submenu="tax"
+                      (click)="toggleSubmenu('tax')"
+                      (mouseover)="isDesktop ? onSidebarHover('tax') : null"
+                      [class.active]="currentSubmenu === 'tax'"
+                    >
+                      <a class="nav-link">
+                        <i class="fas fa-arrow-right"></i> Tax
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+          
+                <!-- Nested Content -->
+                <div class="col-md-9 nested-content">
+                  <!-- Advisory Submenu -->
+                  <div *ngIf="currentSubmenu === 'advisory'" class="submenu-content">
+                    <h5>Advisory</h5>
+                    <p><a class="nav-link" href="services/advisory/corporate-finance">Corporate Finance</a></p>
+                    <p><a class="nav-link" href="services/advisory/corporate-secretarial">Corporate Secretarial</a></p>
+                    <p><a class="nav-link" href="services/advisory/corporate-strategy">Corporate Strategy & Business Development</a></p>
+                    <p><a class="nav-link" href="services/advisory/due-diligence-work">Due Diligence Work</a></p>
+                    <p><a class="nav-link" href="services/advisory/export-development">Export Development</a></p>
+                    <p><a class="nav-link" href="services/advisory/business-finance">Business Finance</a></p>
+                    <p><a class="nav-link" href="services/advisory/transaction-advisory">Transaction Advisory</a></p>
+                    <p><a class="nav-link" href="services/advisory/risk-management">Risk Management</a></p>
+                    <p><a class="nav-link" href="services/advisory/wealth-management">Wealth Management</a></p>
+                    <p><a class="nav-link" href="services/advisory/retirement-pension">Retirement & Pension</a></p>
+                    <p><a class="nav-link" href="services/advisory/human-capital-management">Human Capital Management</a></p>
+                    <p><a class="nav-link" href="services/advisory/management-systems">Management Systems & Services</a></p>
+                    <p><a class="nav-link" href="services/advisory/performance-improvement">Performance Improvement</a></p>
+                    <p><a class="nav-link" href="services/advisory/planning-policy">Planning & Policy Formulation</a></p>
+                  </div>
+          
+                  <!-- Audit & Assurance Submenu -->
+                  <div *ngIf="currentSubmenu === 'audit'" class="submenu-content">
+                    <h5>Audit & Assurance</h5>
+                    <p><a class="nav-link" href="services/audit-assurance/accounting-advisory">Accounting Advisory Services</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/agreed-upon">Special Purpose Audit</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/featured-insights">Private Client Audit</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/financial-statement">Statutory Audit</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/performance-audit">Performance Audit</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/forensic-integrity">Forensic & Integrity Services</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/value-for-money">Value for Money (VFM)</a></p>
+                    <p><a class="nav-link" href="services/audit-assurance/international-financial">IFRS Compliance</a></p>
+                  </div>
+          
+                  <!-- Tax Submenu -->
+                  <div *ngIf="currentSubmenu === 'tax'" class="submenu-content">
+                    <h5>Tax</h5>
+                    <p><a class="nav-link" href="services/tax/payroll-services">Payroll Services</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-advisory-services">Tax Advisory Services</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-compliance-services">Tax Compliance Services</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-audit-&-investigation-support">Tax Audit & Investigation Support</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-intervention-services">Tax Intervention Services</a></p>
+                    <p><a class="nav-link" href="services/tax/international-tax-services">International Tax Services</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-training">Tax Training & Education</a></p>
+                    <p><a class="nav-link" href="services/tax/transfer-pricing">Transfer Pricing</a></p>
+                    <p><a class="nav-link" href="services/tax/tax-health-check-&-risk-assessment">Tax Health Check</a></p>
+                    <p><a class="nav-link" href="services/tax/other-compliance">Other Compliance Services</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="/industries"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Industries
+            </a>
+            <!-- Dropdown menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Added d-flex for flex layout -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/industries"
+                      style="text-decoration: none; color: black"
+                      >Industries</a
+                    >
+                  </h5>
+                  <ul class="list-unstyled">
+                    <!-- <li
+                      data-submenu="blog"
+                      (mouseover)="onSidebarHover('consumer-business')"
+                      [class.active]="currentSubmenu === 'consumer-business'"
+                    >
+                      <a class="nav-link" href="industries/consumer-business"
+                        ><i class="fas fa-arrow-right"></i> Consumer Business</a
+                      >
+                    </li> -->
+                    <li
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/fast-moving-consumer-goods"
+                      > FMCG</a
+                    >
+                  </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/financial-services"
+                        > Financial
+                        Services</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/healthcare">
+                        Healthcare</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/manufacturing">
+                        Manufacturing</a
+                      >
+                    </li>
+                    <li
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/extractive"
+                      > Extractive</a
+                    >
+                  </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/not-for-profit">
+                        Not for profit</a
+                      >
+                    </li>
+                    <li
+                    data-submenu="blog-single"
+                    (mouseover)="onSidebarHover('financial-services')"
+                    [class.active]="currentSubmenu === 'blog-single'"
+                  >
+                    <a class="nav-link" href="industries/government"
+                      > Government</a
+                    >
+                  </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/oil-&-gas"
+                        >Oil & Gas</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a
+                        class="nav-link"
+                        href="industries/real-estate-construction"
+                      >
+                        Real Estate & Construction</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a
+                        class="nav-link"
+                        href="industries/technology-telecommunications"
+                      >
+                        Technology & Telecommunications</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('financial-services')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="industries/transport">
+                        Transport</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="col-md-9 nested-content"> -->
+                  <!-- <div
+                    *ngIf="currentSubmenu === 'consumer-business'"
+                    class="submenu-content"
+                  >
+                    <h5>Consumer Business</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/consumer-products"
+                        >Consumer Products</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/gaming-hospitality-leisure"
+                        >Gaming, Hospitality & Leisure</a
+                      >
+                    </p>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/consumer-business/retail"
+                        >Retail</a
+                      >
+                    </p>
+                  </div> -->
+                  <!-- <div
+                    *ngIf="currentSubmenu === 'financial-services'"
+                    class="submenu-content"
+                  >
+                    <h5>Financial Services</h5>
+                    <p>
+                      <a
+                        class="nav-link"
+                        href="industries/financial-services/asset-management"
+                        >Asset Management</a
+                      >
+                    </p>
+                  </div> -->
+                <!-- </div> -->
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="homeDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <!-- Dropdown menu -->
+            <div
+              class="dropdown-menu mega-dropdown-menu"
+              aria-labelledby="homeDropdown"
+            >
+              <div class="d-flex">
+                <!-- Added d-flex for flex layout -->
+                <div class="col-md-3 sidebar">
+                  <h5 class="sidebar-title">
+                    <a
+                      class="nav-link"
+                      href="/about"
+                      style="text-decoration: none; color: black"
+                      >About</a
+                    >
+                  </h5>
+                  <ul class="list-unstyled">
+                    <li
+                      data-submenu="blog"
+                      (mouseover)="onSidebarHover('blog')"
+                      [class.active]="currentSubmenu === 'blog'"
+                    >
+                      <a class="nav-link" href="/about/about-KWAMU-nigeria"
+                        ><i class="fas fa-arrow-right"></i> About Kwamu Nigeria</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="blog-single"
+                      (mouseover)="onSidebarHover('global')"
+                      [class.active]="currentSubmenu === 'blog-single'"
+                    >
+                      <a class="nav-link" href="/about/vision-mission"
+                        ><i class="fas fa-arrow-right"></i> Vision & Mission</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="email"
+                      (mouseover)="onSidebarHover('people')"
+                      [class.active]="currentSubmenu === 'email'"
+                    >
+                      <a class="nav-link" href="/about/people-value"
+                        ><i class="fas fa-arrow-right"></i> People & Value</a
+                      >
+                    </li>
+                    <li
+                      data-submenu="email"
+                      (mouseover)="onSidebarHover('why')"
+                      [class.active]="currentSubmenu === 'email'"
+                    >
+                      <a class="nav-link" href="/about/value-proposition"
+                        ><i class="fas fa-arrow-right"></i> Value Proposition</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-9 nested-content">
+                  <div
+                    *ngIf="currentSubmenu === 'blog'"
+                    class="submenu-content"
+                    id="about-nested"
+                  >
+                    <h5 style="margin-top: 20px;">About Kwamu Nigeria</h5>
+                    <p style="font-size: 15px">
+                      KWAMU & CO.(KWAMU) is a professional services firm 
+                      <br />
+                      registered under the laws of the Federal Republic of Nigeria
+                      <br />
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'global'"
+                    class="submenu-content"
+                    id="about-nested"
+                  >
+                    <h5 style="margin-top: 20px;">Vision & Mission</h5>
+                    <p style="font-size: 15px">
+                      ‘‘to become a World class Professional Service Firm’’
+                      <br /> <br> <br>
+                      “to be the leader in the provision of value adding professional services to clients,
+                      <br />
+                      while ensuring growth to clients, employees, owners, and firm”
+                    </p>
+                  </div>
+                  <div
+                    *ngIf="currentSubmenu === 'people'"
+                    id="about-nested"
+                    class="submenu-content"
+                  >
+                    <h5 style="margin-top: 20px;">People & Value</h5>
+                    <p style="font-size: 15px">
+                      We have 11 highly experienced partners and directors, over
+                      <br />
+                      80 Professional staff and well over 45 Trainee staff
+                      (all<br />
+                      university graduates).
+                    </p>
+                  </div>
+                  <div *ngIf="currentSubmenu === 'why'" class="submenu-content" id="about-nested">
+                    <h5 style="margin-top: 20px;">Value Proposition</h5>
+                    <p style="font-size: 15px">
+                      KWAMU is dedicated to delivering transformative 
+                      <br />
+                      results that drive profitability,<br />
+                      efficiency, and sustainable growth. 
+                      <br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact" role="button"> Contact Us </a>
+          </li>
+        </ul>
+        <!-- <ul class="header-search me-lg-4">
+          <li class="get-btn">
+            <a
+              href="contact.html"
+              class="btn btn-style btn-primary"
+              title="Get Started"
+            >
+              Get Started <i class="fas fa-arrow-right ms-lg-4 ms-2"></i>
+            </a>
+          </li>
+        </ul> -->
+      </div>
+    </nav>
+  </div>
+</header>

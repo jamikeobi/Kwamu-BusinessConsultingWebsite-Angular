@@ -1,0 +1,261 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.w3l-blog {
+    padding: 60px 0; /* Spacing around the blog section */
+}
+
+/* Blog Container */
+.blog {
+    background-color: white; /* White background for the blog section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.blog-content p{
+    color: black;
+}
+
+/* Blog Post Styles */
+.bloghnypage-left {
+    padding: 20px; /* Padding within the blog post */
+}
+
+/* Single Post Image */
+.single-post-image img {
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Post Title Styles */
+.post-content-title {
+    font-size: 30px; /* Large font for titles */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Bullet Points */
+.bullet-points {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 20px 0; /* Margin around the list */
+}
+
+.bullet-points li {
+    margin-bottom: 10px; /* Spacing between list items */
+    font-size: 16px; /* Font size for bullet points */
+}
+
+.bullet-points span {
+    padding: 10px;
+    color: #254C7F; /* Color for icons */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    padding: 20px; /* Padding inside sidebar */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Sidebar Widget Titles */
+.sidebar-widget h4 {
+    font-size: 18px; /* Larger font for widget titles */
+    margin-bottom: 15px; /* Spacing below titles */
+}
+
+/* Sidebar Updates */
+.sidebar-updates {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar-updates li {
+    margin-bottom: 10px; /* Spacing between items */
+    font-size: 14px; /* Smaller font for links */
+}
+
+.sidebar-updates li span {
+    color: #254C7F; /* Color for update icons */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+
+
+/* Custom card styling */
+
+.card-container {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    flex-wrap: wrap; /* Wraps cards to the next line on smaller screens */
+  }
+  
+  .custom-card {
+    flex: 1 1 calc(50% - 20px); /* Makes each card take up 50% of the container width, minus gap */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 20px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  /* Card Hover Effect */
+  .custom-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card .card-text {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card .read-more-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transform: translateX(-10px); /* Slide in effect */
+    transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s; /* Delay for text */
+  }
+  
+  .custom-card .read-more-link::before {
+    content: "→";
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #254C7F;
+    z-index: 0;
+    transition: transform 0.5s ease;
+  }
+  
+  .custom-card:hover::before {
+    transform: translateX(100%);
+  }
+  
+  .custom-card:hover {
+    color: #fff;
+  }
+  
+  .custom-card:hover .card-title,
+  .custom-card:hover .card-text {
+    color: #fff;
+  }
+  
+  
+  .custom-card:hover .read-more-link {
+    opacity: 1;
+    transform: translateX(0);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  
+  .custom-card .card-body {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  /* Sidebar Styling */
+
+  .sidebar-widget {
+    padding: 20px;
+  }
+  
+  .sidebar-widget h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar-updates {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-updates li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .sidebar-updates li a {
+    text-decoration: none;
+    color: #254C7F;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-updates li a::before,
+  .sidebar-updates li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #254C7F;
+    transition: width 0.4s ease;
+  }
+  
+  .sidebar-updates li a::before {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .sidebar-updates li a::after {
+    right: 0;
+    bottom: 0;
+  }
+  
+  .sidebar-updates li a:hover {
+    color: #254C7F;
+  }
+  
+  .sidebar-updates li a:hover::before,
+  .sidebar-updates li a:hover::after {
+    width: 100%; /* Extends the underline on hover */
+  }
+  
+  .sidebar-updates li span {
+    margin-left: 10px;
+    color: #254C7F;
+    font-size: 0.9rem;
+  }
+  
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-lg-8, .col-lg-4 {
+        flex: 0 0 100%; /* Stack columns on small screens */
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .post-content-title {
+        font-size: 20px; /* Smaller title on very small screens */
+    }
+}

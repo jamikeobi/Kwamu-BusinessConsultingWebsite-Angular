@@ -1,0 +1,159 @@
+
+/* Custom card styling */
+
+.card-container {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    flex-wrap: wrap; /* Wraps cards to the next line on smaller screens */
+  }
+  
+  .custom-card {
+    flex: 1 1 calc(50% - 20px); /* Makes each card take up 50% of the container width, minus gap */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 20px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  /* Card Hover Effect */
+  .custom-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card .card-text {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card .read-more-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transform: translateX(-10px); /* Slide in effect */
+    transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s; /* Delay for text */
+  }
+  
+  .custom-card .read-more-link::before {
+    content: "→";
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #254C7F;
+    z-index: 0;
+    transition: transform 0.5s ease;
+  }
+  
+  .custom-card:hover::before {
+    transform: translateX(100%);
+  }
+  
+  .custom-card:hover {
+    color: #fff;
+  }
+  
+  .custom-card:hover .card-title,
+  .custom-card:hover .card-text {
+    color: #fff;
+  }
+  
+  
+  .custom-card:hover .read-more-link {
+    opacity: 1;
+    transform: translateX(0);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  
+  .custom-card .card-body {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+/* Sidebar */
+.sidebar-widget {
+    padding: 20px;
+  }
+  
+  .sidebar-widget h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar-updates {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-updates li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .sidebar-updates li a {
+    text-decoration: none;
+    color: #121112;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-updates li a::before,
+  .sidebar-updates li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #011024;
+    transition: width 0.4s ease;
+  }
+  
+  .sidebar-updates li a::before {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .sidebar-updates li a::after {
+    right: 0;
+    bottom: 0;
+  }
+  
+  .sidebar-updates li a:hover {
+    color: #011024;
+  }
+  
+  .sidebar-updates li a:hover::before,
+  .sidebar-updates li a:hover::after {
+    width: 100%; /* Extends the underline on hover */
+  }
+  
+  .sidebar-updates li span {
+    margin-left: 10px;
+    color: #121112;
+    font-size: 0.9rem;
+  }
+  

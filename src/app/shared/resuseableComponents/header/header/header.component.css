@@ -1,0 +1,337 @@
+header {
+    background: #011b3d;
+    backdrop-filter: blur(10px);
+    /* border: 1px solid white; */
+    padding: 0px;
+    /* margin-bottom: 30px; */
+}
+
+.nav-link {
+    padding: 5px !important;
+}
+
+.navbar-collapse {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse.show {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+    }
+}
+
+/* Mega Dropdown Styles */
+.mega-dropdown .dropdown-menu {
+    font-size: 13px;
+    width: 90vw; /* Width of the dropdown menu */
+    padding: 3px; /* Adjusted padding for a more compact look */
+    background-color: #3e8ad7; /* Softer background color for the dropdown */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: none; /* Hide the dropdown menu by default */
+    top: 100%;
+    transition: all 0.3s ease;
+    max-height: 70vh; /* Ensure it's scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
+    min-width: 100%; /* Ensure it stretches across the entire width */
+}
+
+/* Show the dropdown on hover */
+.mega-dropdown:hover .dropdown-menu {
+    display: flex; /* Use flexbox to maintain your layout */
+    opacity: 1; /* Optional if you want a fade-in effect */
+    transform: translateY(0);
+}
+
+/* Sidebar styling */
+.mega-dropdown .dropdown-menu .sidebar {
+    max-width: 320px; /* Increased width for better visibility */
+    width: 100%; /* Allow full width usage */
+    background: linear-gradient(180deg, #254C7F, #4682b6); /* Lighter gradient for a cleaner look */
+    border-radius: 12px;
+    border-right: 2px solid #ccc;
+    padding: 30px; /* Ample padding for better spacing */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar {
+  max-width: 320px; /* Increased width for better visibility */
+  width: 100%; /* Allow full width usage */
+  background: linear-gradient(180deg, #254C7F, #4682b6); /* Lighter gradient for a cleaner look */
+  border-radius: 12px;
+  border-right: 2px solid #ccc;
+  padding: 30px; /* Ample padding for better spacing */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 100vh; /* Limit the height to the viewport */
+}
+
+/* Custom scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #4682b6; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 2px solid #ffffff; /* Add padding-like space between thumb and track */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #254C7F; /* Darker thumb color on hover */
+}
+
+/* Add smooth scroll behavior */
+.sidebar {
+  scroll-behavior: smooth;
+}
+
+
+/* Sidebar title styling */
+.mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.mega-dropdown .dropdown-menu .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-dropdown .dropdown-menu .sidebar li {
+    padding: 10px 10px; /* Consistent padding for list items */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.submenu-content a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.submenu-content a:hover {
+    color: #011024 !important;
+}
+
+/* Sidebar item links */
+.mega-dropdown .dropdown-menu .sidebar li a {
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flexbox;
+    align-items: center; /* Center icons and text vertically */
+}
+
+/* Icon styling */
+.mega-dropdown .dropdown-menu .sidebar li a i {
+    margin-right: 10px; /* Space between icon and text */
+    color: black; /* Icon color */
+}
+
+/* Sidebar hover and active state */
+.mega-dropdown .dropdown-menu .sidebar li:hover,
+.mega-dropdown .dropdown-menu .sidebar li.active {
+    background-color: #d9e7f3; /* Light background on hover */
+    color: #254C7F; /* Change text color on hover */
+    transform: translateX(5px); /* Subtle shift on hover */
+}
+
+.mega-dropdown .dropdown-menu .sidebar li a:hover {
+    color: #254C7F; /* Change text color on hover */
+}
+
+.mega-dropdown .dropdown-menu .sidebar li:hover a {
+    color: #254C7F; /* Darker hover color for the link */
+    font-weight: 700; /* Bold text on hover */
+}
+
+/* Nested content styling */
+.mega-dropdown .dropdown-menu .nested-content {
+    padding-left: 30px; /* Indent for nested content */
+    color: black;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.mega-dropdown .dropdown-menu .nested-content h5 {
+    font-size: 1.6em; /* Increased heading size */
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.mega-dropdown .dropdown-menu .nested-content p {
+    font-size: 1em; /* Maintain font size for paragraphs */
+    line-height: 1;
+    color: black;
+}
+
+#about-nested {
+    display: block;
+    text-align: center;
+    align-content: center;
+}
+
+#about-nested p {
+    /* margin: 30px; */
+}
+
+.mega-dropdown .dropdown-menu .nested-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-dropdown .dropdown-menu .nested-content ul li {
+    padding: 5px 0; /* Maintain spacing for nested items */
+    font-size: 1px !important;
+}
+
+.mega-dropdown .dropdown-menu .nested-content ul li a {
+    color: black;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.mega-dropdown .dropdown-menu .nested-content ul li a:hover {
+    color: #fff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Animation for the dropdown */
+.mega-dropdown .dropdown-menu {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Slide in from below */
+    transition: all 0.3s ease; /* Smooth transition for fade and movement */
+}
+
+.mega-dropdown:hover .dropdown-menu {
+    opacity: 1; /* Fade in effect */
+    transform: translateY(0); /* Slide into place */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+        font-size: 1.4em;
+        margin-bottom: 10px; /* Added spacing */
+    }
+
+    .mega-dropdown .dropdown-menu .sidebar li a {
+        font-size: 1em;
+        padding: 5px 10px; /* Adjusted spacing */
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content h5 {
+        font-size: 1.4em;
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content p,
+    .mega-dropdown .dropdown-menu .nested-content ul li a {
+        font-size: 0.9em;
+        line-height: 1.4; /* Better readability */
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
+    }
+}
+
+@media (max-width: 720px) {
+    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+        font-size: 1.2em;
+        text-align: center; /* Center alignment */
+    }
+
+    .mega-dropdown .dropdown-menu .sidebar li a {
+        font-size: 0.9em;
+        padding: 5px; /* Reduced padding */
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content h5 {
+        font-size: 1.2em;
+        margin-bottom: 8px; /* Better spacing */
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content p,
+    .mega-dropdown .dropdown-menu .nested-content ul li a {
+        font-size: 0.8em;
+        line-height: 1.3;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
+    }
+}
+
+@media (max-width: 420px) {
+    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+        font-size: 1em;
+        text-align: left; /* Adjust alignment */
+        padding: 5px 0; /* Reduce padding */
+    }
+
+    .mega-dropdown .dropdown-menu .sidebar li a {
+        font-size: 0.8em;
+        margin: 3px 0; /* Reduced margin for compact layout */
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content h5 {
+        font-size: 1em;
+        font-weight: bold; /* Emphasize headers */
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content p,
+    .mega-dropdown .dropdown-menu .nested-content ul li a {
+        font-size: 0.7em;
+        line-height: 1.2;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
+    }
+}
+
+@media (max-width: 320px) {
+    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+        font-size: 0.9em;
+        padding: 5px; /* Compact spacing */
+    }
+
+    .mega-dropdown .dropdown-menu .sidebar li a {
+        font-size: 0.7em;
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content h5 {
+        font-size: 0.9em;
+    }
+
+    .mega-dropdown .dropdown-menu .nested-content p,
+    .mega-dropdown .dropdown-menu .nested-content ul li a {
+        font-size: 0.6em;
+    }
+
+    .mega-dropdown .dropdown-menu {
+        min-width: 100%; /* Ensure full width */
+    }
+}

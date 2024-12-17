@@ -1,0 +1,39 @@
+.blog-content span {
+    font-size: 15px;
+    padding: 10px;
+    display: block; /* Ensures each span is on a new line */
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments for screen sizes from 1024px to 320px */
+@media (max-width: 1024px) {
+    .blog-content span {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-content span {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-content span {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .blog-content span {
+        font-size: 11px;
+        padding: 4px;
+    }
+}
+
+.blog-content {
+    margin-bottom: 10px; /* Slightly increased spacing for improved readability */
+}

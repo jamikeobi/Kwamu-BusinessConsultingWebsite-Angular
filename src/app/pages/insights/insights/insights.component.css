@@ -1,0 +1,210 @@
+
+/* Span Styling */
+
+.tag-container {
+    margin: 70px 0; /* Adjust margin for spacing */
+}
+
+.same-style {
+    display: flex; /* Makes each span align horizontally */
+    justify-content: space-between; /* Adds space between text and icon */
+    align-items: center; /* Center the icon vertically with text */
+    padding: 10px 0; /* Adds vertical padding */
+    font-size: 16px; /* Optional: Set font size */
+    color: #333; /* Optional: Set text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.same-style a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.same-style a:hover{
+    color: #254C7F;
+}
+.same-style i {
+    margin-left: 5px; /* Adds space between the text and the icon */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header styling */
+.title-subw3hny {
+  font-size: 30px;
+  text-align: center; /* Centers the text */
+  margin: 0 auto; /* Ensures it is centered in its container */
+  color: #333; /* Initial text color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.title-subw3hny:hover {
+  color: #007bff !important; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+
+/* Custom card styling */
+
+.card-container {
+  display: flex;
+  gap: 20px; /* Spacing between cards */
+  flex-wrap: wrap; /* Wraps cards to the next line on smaller screens */
+}
+
+.custom-card {
+  flex: 1 1 calc(50% - 20px); /* Makes each card take up 50% of the container width, minus gap */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 20px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Card Hover Effect */
+.custom-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.custom-card .card-text {
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.custom-card .read-more-link {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  transform: translateX(-10px); /* Slide in effect */
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s; /* Delay for text */
+}
+
+.custom-card .read-more-link::before {
+  content: "→";
+  font-size: 1.2rem;
+  margin-right: 5px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.custom-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #254C7F;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover::before {
+  transform: translateX(100%);
+}
+
+.custom-card:hover {
+  color: #fff;
+}
+
+.custom-card:hover .card-title,
+.custom-card:hover .card-text {
+  color: #fff;
+}
+
+
+.custom-card:hover .read-more-link {
+  opacity: 1;
+  transform: translateX(0);
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.custom-card .card-body {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Responsive Styles */
+
+/* Large Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .custom-card {
+      flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+      max-width: 400px; /* Restrict card width */
+    }
+  }
+  
+  /* Desktops and Tablets (1024px and up) */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .custom-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+  }
+  
+  /* Tablets (768px and up) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+  }
+  
+  /* Mobile (576px to 767px) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .custom-card {
+      flex: 1 1 100%; /* 1 card per row */
+    }
+  }
+  
+  /* Small Mobile (up to 575px) */
+  @media (max-width: 575px) {
+    .custom-card {
+      flex: 1 1 100%; /* 1 card per row */
+      padding: 15px;
+    }
+  
+    .custom-card .card-title {
+      font-size: 1.1rem; /* Smaller title */
+    }
+  
+    .custom-card .card-text {
+      font-size: 0.9rem; /* Smaller text */
+    }
+  
+    .custom-card .read-more-link {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Extra Small Mobile (up to 400px) */
+  @media (max-width: 400px) {
+    .custom-card {
+      padding: 10px;
+    }
+  
+    .custom-card .card-title {
+      font-size: 1rem; /* Smaller title */
+    }
+  
+    .custom-card .card-text {
+      font-size: 0.85rem; /* Smaller text */
+    }
+  
+    .custom-card .read-more-link {
+      font-size: 0.85rem;
+    }
+  }

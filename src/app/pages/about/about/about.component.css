@@ -1,0 +1,94 @@
+h3 a {
+    text-decoration: none;
+    color: #254C7F;
+    transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+}
+
+h3 a:hover {
+    color: #1A3B66; /* Slightly darker color on hover */
+    transform: scale(1.1);
+    border-bottom: 2px solid #1A3B66; /* Underline effect on hover */
+}
+
+.mb-4{
+    padding: 10px;
+}
+
+/* Section Styling */
+#vision-mission {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    color: #333;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Card Styling */
+  .card {
+    color: #1A3B66;
+    border: none;
+    border-radius: 10px;
+    height: 250px; /* Ensures uniform height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .card {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .card-title {
+      font-size: 1.3rem;
+    }
+  
+    .card-text {
+      font-size: 0.95rem;
+    }
+  }
+  
