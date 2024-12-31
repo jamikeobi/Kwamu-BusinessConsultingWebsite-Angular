@@ -71,7 +71,6 @@ import { SpecialPurposeComponent } from './pages/services/services/audit-assuran
 import { PrivateClientComponent } from './pages/services/services/audit-assurance/private-client/private-client.component';
 import { StatutoryAuditsComponent } from './pages/services/services/audit-assurance/statutory-audits/statutory-audits.component';
 import { AuditSidebarComponent } from './pages/services/services/audit-assurance/audit-sidebar/audit-sidebar.component';
-import { TaxSidebarComponent } from './pages/services/services/tax/tax-sidebar/tax-sidebar.component';
 import { FMCGComponent } from './pages/industries/industries/fmcg/fmcg.component';
 import { ExtractiveComponent } from './pages/industries/industries/extractive/extractive.component';
 import { GovernmentComponent } from './pages/industries/industries/government/government.component';
@@ -79,6 +78,7 @@ import { OilGasComponent } from './pages/industries/industries/oil-gas/oil-gas.c
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './pages/contact/dashboard/dashboard.component';
+import { TaxSidebarComponent } from './pages/services/services/tax/tax-sidebar/tax-sidebar.component';
 
 
 
@@ -154,12 +154,12 @@ import { DashboardComponent } from './pages/contact/dashboard/dashboard.componen
     PrivateClientComponent,
     StatutoryAuditsComponent,
     AuditSidebarComponent,
-    TaxSidebarComponent,
     FMCGComponent,
     ExtractiveComponent,
     GovernmentComponent,
     OilGasComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaxSidebarComponent
   ],
   imports: [
     BrowserModule,

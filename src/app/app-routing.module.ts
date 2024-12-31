@@ -140,7 +140,7 @@ const routes: Routes = [
 
   //About Sub menu
   {path:'about', component: AboutComponent},
-  {path:'about/about-KWAMU-nigeria', component: AboutBdoNigeriaComponent},
+  {path:'about/about-BDO-nigeria', component: AboutBdoNigeriaComponent},
   {path:'about/vision-mission', component: GlobalNetworkComponent},
   {path:'about/people-value', component: PeopleValueComponent},
   {path:'about/value-proposition', component: WhyBdoComponent},

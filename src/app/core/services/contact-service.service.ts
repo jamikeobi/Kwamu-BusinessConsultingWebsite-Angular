@@ -7,7 +7,7 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactServiceService {
-  private baseUrl = 'https://kwamu-bb31e-default-rtdb.firebaseio.com/contacts';
+  private baseUrl = 'https://bdo-bb31e-default-rtdb.firebaseio.com/contacts';
 
   constructor(private http: HttpClient) {}
 
