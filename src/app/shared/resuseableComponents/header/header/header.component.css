@@ -1,11 +1,103 @@
+/* Header Styling */
 header {
     background: #011b3d;
     backdrop-filter: blur(10px);
-    /* border: 1px solid white; */
     padding: 0px;
-    /* margin-bottom: 30px; */
 }
 
+/* Hamburger styling */
+.navbar-toggler {
+    position: fixed; /* Ensures the button stays fixed on the screen */
+    top: 30px; /* Adjust the top position */
+    right: 10px; /* Adjust the right position */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust width to your preference */
+    height: 50px; /* Adjust height to your preference */
+    background-color: #0056b3; /* Blue background color */
+    border: none; /* Removes the default button border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Makes the button look clickable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth effects */
+    z-index: 1000; /* Ensures the button stays above other elements */
+  }
+  
+  .navbar-toggler:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .navbar-toggler:active {
+    transform: scale(0.95); /* Button shrinks slightly when clicked */
+  }
+  
+  .navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(9, 9, 9); /* White bar */
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: rgb(7, 7, 7); /* Matches main bar */
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler-icon::before {
+    top: -8px; /* Positions the top bar */
+  }
+  
+  .navbar-toggler-icon::after {
+    top: 8px; /* Positions the bottom bar */
+  }
+
+  
+/* Media Queries for responsiveness */
+
+/* For screens 1024px and above */
+@media (min-width: 1024px) {
+    .navbar-toggler {
+        display: none; /* Hides the hamburger button on large screens */
+    }
+}
+
+/* For screens between 1024px and 768px */
+@media (max-width: 1024px) {
+    .navbar-toggler {
+        display: flex; /* Ensures the hamburger button is visible */
+    }
+}
+
+/* For screens between 768px and 600px */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: flex; /* Ensures the hamburger button is visible */
+    }
+}
+
+/* For screens between 600px and 480px */
+@media (max-width: 600px) {
+    .navbar-toggler {
+        display: flex; /* Ensures the hamburger button is visible */
+    }
+}
+
+/* For screens between 480px and 320px */
+@media (max-width: 480px) {
+    .navbar-toggler {
+        display: flex; /* Ensures the hamburger button is visible */
+    }
+}
+
+/* Navbar and Navigation Links */
 .nav-link {
     padding: 5px !important;
 }
@@ -28,310 +120,196 @@ header {
 /* Mega Dropdown Styles */
 .mega-dropdown .dropdown-menu {
     font-size: 13px;
-    width: 90vw; /* Width of the dropdown menu */
-    padding: 3px; /* Adjusted padding for a more compact look */
-    background-color: #3e8ad7; /* Softer background color for the dropdown */
+    width: 90vw;
+    padding: 3px;
+    background-color: #3e8ad7;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    display: none; /* Hide the dropdown menu by default */
+    display: none;
     top: 100%;
     transition: all 0.3s ease;
-    max-height: 70vh; /* Ensure it's scrollable */
-    overflow-y: auto; /* Enable vertical scrolling */
-    min-width: 100%; /* Ensure it stretches across the entire width */
+    max-height: 70vh;
+    overflow-y: auto;
+    min-width: 100%;
 }
 
-/* Show the dropdown on hover */
 .mega-dropdown:hover .dropdown-menu {
-    display: flex; /* Use flexbox to maintain your layout */
-    opacity: 1; /* Optional if you want a fade-in effect */
+    display: flex;
+    opacity: 1;
     transform: translateY(0);
 }
 
-/* Sidebar styling */
-.mega-dropdown .dropdown-menu .sidebar {
-    max-width: 320px; /* Increased width for better visibility */
-    width: 100%; /* Allow full width usage */
-    background: linear-gradient(180deg, #254C7F, #4682b6); /* Lighter gradient for a cleaner look */
+/* Sidebar Styling */
+.sidebar {
+    max-width: 320px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #254C7F, #4682b6);
     border-radius: 12px;
     border-right: 2px solid #ccc;
-    padding: 30px; /* Ample padding for better spacing */
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
-.sidebar {
-  max-width: 320px; /* Increased width for better visibility */
-  width: 100%; /* Allow full width usage */
-  background: linear-gradient(180deg, #254C7F, #4682b6); /* Lighter gradient for a cleaner look */
-  border-radius: 12px;
-  border-right: 2px solid #ccc;
-  padding: 30px; /* Ample padding for better spacing */
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  overflow-y: auto; /* Enable vertical scrolling */
-  max-height: 100vh; /* Limit the height to the viewport */
-}
-
-/* Custom scrollbar styling */
+/* Custom Scrollbar */
 .sidebar::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+    width: 10px;
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Background of the scrollbar track */
-  border-radius: 10px; /* Rounded edges for the track */
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background: #4682b6; /* Scrollbar thumb color */
-  border-radius: 10px; /* Rounded edges for the thumb */
-  border: 2px solid #ffffff; /* Add padding-like space between thumb and track */
+    background: #4682b6;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
 }
 
 .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #254C7F; /* Darker thumb color on hover */
+    background: #254C7F;
 }
 
-/* Add smooth scroll behavior */
-.sidebar {
-  scroll-behavior: smooth;
-}
-
-
-/* Sidebar title styling */
-.mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+/* Sidebar Titles and Items */
+.sidebar .sidebar-title {
     font-size: 1.5em;
     font-weight: 700;
     color: black;
     margin-bottom: 20px;
 }
 
-.mega-dropdown .dropdown-menu .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mega-dropdown .dropdown-menu .sidebar li {
-    padding: 10px 10px; /* Consistent padding for list items */
+.sidebar li {
+    padding: 10px;
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.submenu-content a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-
-.submenu-content a:hover {
-    color: #011024 !important;
-}
-
-/* Sidebar item links */
-.mega-dropdown .dropdown-menu .sidebar li a {
+.sidebar li a {
     color: black;
     font-weight: 600;
-    cursor: pointer;
     font-size: 0.9em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
     transition: color 0.3s ease;
-    display: flexbox;
-    align-items: center; /* Center icons and text vertically */
 }
 
-/* Icon styling */
-.mega-dropdown .dropdown-menu .sidebar li a i {
-    margin-right: 10px; /* Space between icon and text */
-    color: black; /* Icon color */
-}
-
-/* Sidebar hover and active state */
-.mega-dropdown .dropdown-menu .sidebar li:hover,
-.mega-dropdown .dropdown-menu .sidebar li.active {
-    background-color: #d9e7f3; /* Light background on hover */
-    color: #254C7F; /* Change text color on hover */
-    transform: translateX(5px); /* Subtle shift on hover */
-}
-
-.mega-dropdown .dropdown-menu .sidebar li a:hover {
-    color: #254C7F; /* Change text color on hover */
-}
-
-.mega-dropdown .dropdown-menu .sidebar li:hover a {
-    color: #254C7F; /* Darker hover color for the link */
-    font-weight: 700; /* Bold text on hover */
-}
-
-/* Nested content styling */
-.mega-dropdown .dropdown-menu .nested-content {
-    padding-left: 30px; /* Indent for nested content */
+.sidebar li a i {
+    margin-right: 10px;
     color: black;
-    display: block;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background-color: #d9e7f3;
+    color: #254C7F;
+    transform: translateX(5px);
+}
+
+.sidebar li a:hover {
+    color: #254C7F;
+    font-weight: 700;
+}
+
+/* Nested Content Styling */
+.nested-content {
+    padding-left: 30px;
+    color: black;
     transition: all 0.3s ease;
 }
 
-.mega-dropdown .dropdown-menu .nested-content h5 {
-    font-size: 1.6em; /* Increased heading size */
+.nested-content h5 {
+    font-size: 1.6em;
     font-weight: 700;
     color: black;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px;
 }
 
-.mega-dropdown .dropdown-menu .nested-content p {
-    font-size: 1em; /* Maintain font size for paragraphs */
-    line-height: 1;
+.nested-content p {
+    font-size: 1em;
     color: black;
 }
 
-#about-nested {
-    display: block;
-    text-align: center;
-    align-content: center;
-}
-
-#about-nested p {
-    /* margin: 30px; */
-}
-
-.mega-dropdown .dropdown-menu .nested-content ul {
+.nested-content ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.mega-dropdown .dropdown-menu .nested-content ul li {
-    padding: 5px 0; /* Maintain spacing for nested items */
-    font-size: 1px !important;
+.nested-content ul li {
+    padding: 5px 0;
 }
 
-.mega-dropdown .dropdown-menu .nested-content ul li a {
+.nested-content ul li a {
     color: black;
-    font-size: 10px;
+    font-size: 0.9em;
     text-decoration: none;
 }
 
-.mega-dropdown .dropdown-menu .nested-content ul li a:hover {
-    color: #fff; /* Change color on hover */
-    text-decoration: underline; /* Underline on hover */
+.nested-content ul li a:hover {
+    color: #254C7F;
+    text-decoration: underline;
 }
 
-/* Animation for the dropdown */
-.mega-dropdown .dropdown-menu {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Slide in from below */
-    transition: all 0.3s ease; /* Smooth transition for fade and movement */
-}
-
-.mega-dropdown:hover .dropdown-menu {
-    opacity: 1; /* Fade in effect */
-    transform: translateY(0); /* Slide into place */
-}
-
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 1.4em;
-        margin-bottom: 10px; /* Added spacing */
-    }
-
-    .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 1em;
-        padding: 5px 10px; /* Adjusted spacing */
-    }
-
-    .mega-dropdown .dropdown-menu .nested-content h5 {
+    .sidebar .sidebar-title {
         font-size: 1.4em;
     }
 
-    .mega-dropdown .dropdown-menu .nested-content p,
-    .mega-dropdown .dropdown-menu .nested-content ul li a {
-        font-size: 0.9em;
-        line-height: 1.4; /* Better readability */
-    }
-
-    .mega-dropdown .dropdown-menu {
-        min-width: 100%; /* Ensure full width */
+    .nested-content h5 {
+        font-size: 1.4em;
     }
 }
 
 @media (max-width: 720px) {
-    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+    .sidebar .sidebar-title {
         font-size: 1.2em;
-        text-align: center; /* Center alignment */
+        text-align: center;
     }
 
-    .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.9em;
-        padding: 5px; /* Reduced padding */
-    }
-
-    .mega-dropdown .dropdown-menu .nested-content h5 {
+    .nested-content h5 {
         font-size: 1.2em;
-        margin-bottom: 8px; /* Better spacing */
     }
 
-    .mega-dropdown .dropdown-menu .nested-content p,
-    .mega-dropdown .dropdown-menu .nested-content ul li a {
+    .nested-content p,
+    .nested-content ul li a {
         font-size: 0.8em;
-        line-height: 1.3;
-    }
-
-    .mega-dropdown .dropdown-menu {
-        min-width: 100%; /* Ensure full width */
     }
 }
 
 @media (max-width: 420px) {
-    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
+    .sidebar .sidebar-title {
         font-size: 1em;
-        text-align: left; /* Adjust alignment */
-        padding: 5px 0; /* Reduce padding */
+        text-align: left;
     }
 
-    .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.8em;
-        margin: 3px 0; /* Reduced margin for compact layout */
-    }
-
-    .mega-dropdown .dropdown-menu .nested-content h5 {
+    .nested-content h5 {
         font-size: 1em;
-        font-weight: bold; /* Emphasize headers */
+        font-weight: bold;
     }
 
-    .mega-dropdown .dropdown-menu .nested-content p,
-    .mega-dropdown .dropdown-menu .nested-content ul li a {
+    .nested-content p,
+    .nested-content ul li a {
         font-size: 0.7em;
-        line-height: 1.2;
-    }
-
-    .mega-dropdown .dropdown-menu {
-        min-width: 100%; /* Ensure full width */
     }
 }
 
 @media (max-width: 320px) {
-    .mega-dropdown .dropdown-menu .sidebar .sidebar-title {
-        font-size: 0.9em;
-        padding: 5px; /* Compact spacing */
-    }
-
-    .mega-dropdown .dropdown-menu .sidebar li a {
-        font-size: 0.7em;
-    }
-
-    .mega-dropdown .dropdown-menu .nested-content h5 {
+    .sidebar .sidebar-title {
         font-size: 0.9em;
     }
 
-    .mega-dropdown .dropdown-menu .nested-content p,
-    .mega-dropdown .dropdown-menu .nested-content ul li a {
+    .nested-content h5 {
+        font-size: 0.9em;
+    }
+
+    .nested-content p,
+    .nested-content ul li a {
         font-size: 0.6em;
-    }
-
-    .mega-dropdown .dropdown-menu {
-        min-width: 100%; /* Ensure full width */
     }
 }
